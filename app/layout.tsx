@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} text-neutral-50 antialiased blur-[.25px]`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-neutral-950 text-neutral-50 antialiased blur-[.25px]`}
       >
         <ParticlesBackground />
         <main className="prose relative z-10 container mx-auto max-w-2xl p-4">
