@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #000;
+  background-image: radial-gradient(#fff 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  animation: wave 8s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 5px 10px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

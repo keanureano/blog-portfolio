@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Keanu Reaño",
-  description: "Keanu Reaño's personal website",
+  description: "I'm Keanu Reaño, a system developer and software engineer.",
 };
 
 export default function RootLayout({
@@ -25,9 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-50`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-neutral-950 text-neutral-50 antialiased blur-[.5px]`}
       >
-        {children}
+        <ParticlesBackground />
+        <main className="prose relative z-10 container mx-auto max-w-2xl p-4">
+          {children}
+        </main>
       </body>
     </html>
   );
