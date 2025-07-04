@@ -49,7 +49,7 @@ export default function ParticlesBackground() {
           },
         },
         opacity: {
-          value: 0.2,
+          value: 0.25,
           random: false,
           animation: {
             enable: false,
@@ -139,16 +139,11 @@ export default function ParticlesBackground() {
   if (!isInitialized) return null;
 
   return (
-    <div className="pointer-events-none absolute top-0 left-0 z-0 h-full w-full">
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-      />
-    </div>
+    <Particles
+      id="tsparticles"
+      particlesLoaded={particlesLoaded}
+      options={options}
+      className="pointer-events-none fixed inset-0 z-[-1] h-screen w-screen"
+    />
   );
 }
