@@ -11,7 +11,7 @@ export default function Navbar() {
         {meta.logo}
       </Link>
       <ul className="flex space-x-4">
-        {meta.navLinks.map((link) => (
+        {meta.links.map((link) => (
           <li key={link.name}>
             <Link
               href={link.href}

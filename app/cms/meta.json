@@ -2,8 +2,10 @@
   "name": "Keanu Reaño",
   "logo": "KN",
   "description": "Personal site of Keanu Reaño — software engineer and creator.",
-  "navLinks": [
+  "url": "https://keanureano.com",
+  "links": [
     { "name": "Home", "href": "/" },
-    { "name": "About", "href": "/about" }
+    { "name": "About", "href": "/about" },
+    { "name": "Contact", "href": "/contact" }
   ]
 }
