@@ -24,7 +24,7 @@ export default function ParticlesBackground() {
       fullScreen: { enable: false },
       particles: {
         number: {
-          value: 500,
+          value: 1000,
           density: {
             enable: true,
             area: 100,
@@ -49,7 +49,7 @@ export default function ParticlesBackground() {
           },
         },
         opacity: {
-          value: 0.25,
+          value: 0.1,
           random: false,
           animation: {
             enable: false,
