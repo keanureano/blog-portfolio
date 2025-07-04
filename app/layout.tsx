@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ParticlesBackground from "./components/ParticlesBackground";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Navbar from "./components/Navbar";
+import meta from "./cms/meta.json";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -14,8 +11,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Keanu Reaño",
-  description: "I'm Keanu Reaño, a system developer and software engineer.",
+  title: meta.name,
+  description: meta.description,
 };
 
 export default function RootLayout({
@@ -26,9 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-neutral-950 text-neutral-50 antialiased blur-[.25px]`}
+        className={`${geistMono.className} bg-neutral-950 text-neutral-50 antialiased`}
       >
         <ParticlesBackground />
+        <Navbar />
         <main className="prose relative z-10 container mx-auto max-w-2xl p-4">
           {children}
         </main>

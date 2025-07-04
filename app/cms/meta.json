@@ -1,0 +1,9 @@
+{
+  "name": "Keanu Reaño",
+  "logo": "KN",
+  "description": "Personal site of Keanu Reaño — software engineer and creator.",
+  "navLinks": [
+    { "name": "Home", "href": "/" },
+    { "name": "About", "href": "/about" }
+  ]
+}
