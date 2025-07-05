@@ -20,7 +20,7 @@
     }
 
     blockquote {
-      @apply rounded-[0.25rem] border-l-2 border-neutral-500 pl-2;
+      @apply rounded-[0.25rem] border-l-2 border-neutral-500 pl-3;
     }
   }
 }
