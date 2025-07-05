@@ -8,14 +8,14 @@
     }
 
     p {
-      @apply mb-6 leading-loose;
+      @apply mb-6 leading-relaxed;
     }
 
     em {
-      @apply rounded-xs bg-neutral-800 px-1.5 py-0.5 not-italic transition hover:bg-neutral-700 hover:text-neutral-50;
+      @apply rounded-xs bg-neutral-800 px-1 text-neutral-300 not-italic transition hover:bg-neutral-700 hover:text-neutral-50;
     }
 
-    a {
+    a:not(:has(em)) {
       @apply font-semibold whitespace-nowrap text-neutral-50 transition hover:underline;
     }
   }
@@ -60,6 +60,17 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --drop-shadow-glow: 0 0 10px rgba(255, 255, 255, 0.5);
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+  @keyframes fadeIn {
+    from {
+      mask-image: linear-gradient(to bottom, black, black 30%);
+      opacity: 0;
+    }
+    to {
+      mask-image: linear-gradient(to bottom, black, black);
+      opacity: 1;
+    }
+  }
 }
 
 :root {

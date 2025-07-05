@@ -60,11 +60,11 @@ export const BackgroundBeams = React.memo(
     return (
       <div
         className={cn(
-          "pointer-events-none absolute inset-0 flex h-full w-full items-center justify-center [mask-size:40px] [mask-repeat:no-repeat]",
+          "pointer-events-none fixed inset-0 flex h-full w-full items-center justify-center [mask-size:40px] [mask-repeat:no-repeat]",
           className,
         )}
       >
-        <div className="pointer-events-none absolute inset-0 z-10 bg-[url('/noise.png')] bg-auto opacity-20 mix-blend-screen" />
+        <div className="pointer-events-none absolute inset-0 z-10 h-full w-full bg-[url('/noise.png')] bg-auto opacity-20 mix-blend-screen" />
         <svg
           className="pointer-events-none absolute z-0 h-full w-full"
           width="100%"

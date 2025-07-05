@@ -25,11 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.className} bg-black text-neutral-300 antialiased selection:bg-neutral-900`}
+        className={`${geistMono.className} bg-black text-neutral-400 antialiased selection:bg-neutral-900`}
       >
         <BackgroundBeams />
         <Navbar />
-        <main className="mdx relative z-10 container mx-auto max-w-2xl p-4">
+        <main className="animate-fade-in mdx relative z-10 container mx-auto min-h-screen max-w-2xl px-4 py-12">
           {children}
         </main>
       </body>
