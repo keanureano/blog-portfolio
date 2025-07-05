@@ -18,6 +18,10 @@
     a:not(:has(em)) {
       @apply font-semibold whitespace-nowrap text-neutral-50 transition hover:underline;
     }
+
+    blockquote {
+      @apply rounded-[0.25rem] border-l-2 border-neutral-500 pl-2;
+    }
   }
 }
 
