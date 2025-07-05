@@ -64,7 +64,7 @@ export const BackgroundBeams = React.memo(
           className,
         )}
       >
-        <div className="animate-flicker pointer-events-none absolute inset-0 z-10 bg-[url('/noise.png')] bg-auto mix-blend-screen" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-[url('/noise.png')] bg-auto opacity-20 mix-blend-screen" />
         <svg
           className="pointer-events-none absolute z-0 h-full w-full"
           width="100%"

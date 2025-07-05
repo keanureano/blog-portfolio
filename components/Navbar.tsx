@@ -1,6 +1,8 @@
+import { mdx } from "@/lib/mdx";
 import { Doto } from "next/font/google";
 import Link from "next/link";
-import meta from "../cms/meta.json";
+
+const { frontmatter } = await mdx("cms/home.mdx");
 
 const dotoMono = Doto({ subsets: ["latin"] });
 
@@ -11,14 +13,14 @@ export default function Navbar() {
         href="/"
         className={`${dotoMono.className} hover:drop-shadow-glow text-4xl font-bold text-neutral-50 transition`}
       >
-        {meta.logo}
+        {frontmatter.logo}
       </Link>
       <ul className="flex space-x-4">
-        {meta.links.map((link) => (
+        {frontmatter.links.map((link: any) => (
           <li key={link.name}>
             <Link
               href={link.href}
-              className="hover hover:drop-shadow-glow text-neutral-400 transition hover:text-neutral-50"
+              className="hover hover:drop-shadow-glow transition hover:text-neutral-50"
             >
               {link.name}
             </Link>
