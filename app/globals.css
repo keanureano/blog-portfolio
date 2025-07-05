@@ -12,10 +12,14 @@
     }
 
     em {
-      @apply rounded-xs bg-neutral-800 px-1 text-neutral-300 not-italic transition hover:bg-neutral-700 hover:text-neutral-50;
+      @apply not-italic underline decoration-wavy;
     }
 
-    a:not(:has(em)) {
+    strong {
+      @apply rounded-xs bg-neutral-800 px-1 font-normal text-neutral-300 not-italic transition hover:bg-neutral-700 hover:text-neutral-50;
+    }
+
+    a:not(:has(strong)) {
       @apply font-semibold whitespace-nowrap text-neutral-50 transition hover:underline;
     }
 
