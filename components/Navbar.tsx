@@ -7,7 +7,10 @@ const dotoMono = Doto({ subsets: ["latin"] });
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between p-4">
-      <Link href="/" className={`${dotoMono.className} text-4xl font-bold`}>
+      <Link
+        href="/"
+        className={`${dotoMono.className} hover:drop-shadow-glow text-4xl font-bold text-neutral-50 transition`}
+      >
         {meta.logo}
       </Link>
       <ul className="flex space-x-4">
@@ -15,7 +18,7 @@ export default function Navbar() {
           <li key={link.name}>
             <Link
               href={link.href}
-              className="hover text-neutral-300 transition hover:text-neutral-50"
+              className="hover hover:drop-shadow-glow text-neutral-400 transition hover:text-neutral-50"
             >
               {link.name}
             </Link>

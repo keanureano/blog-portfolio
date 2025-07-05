@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import meta from "./cms/meta.json";
+import meta from "../cms/meta.json";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import Navbar from "@/components/Navbar";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.className} bg-black text-neutral-50 antialiased`}
+        className={`${geistMono.className} bg-black text-neutral-400 antialiased selection:bg-neutral-900`}
       >
         <BackgroundBeams />
         <Navbar />

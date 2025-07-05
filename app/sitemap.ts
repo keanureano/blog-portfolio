@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import meta from "./cms/meta.json";
+import meta from "../cms/meta.json";
 
 export const dynamic = "force-static";
 
