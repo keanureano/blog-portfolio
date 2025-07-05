@@ -11,10 +11,6 @@
       @apply mb-6 leading-relaxed;
     }
 
-    em {
-      @apply not-italic underline decoration-wavy;
-    }
-
     strong {
       @apply rounded-xs bg-neutral-800 px-1 font-normal text-neutral-300 not-italic transition hover:bg-neutral-700 hover:text-neutral-50;
     }
