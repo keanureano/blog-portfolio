@@ -11,6 +11,10 @@
       @apply mb-6 leading-relaxed;
     }
 
+    em {
+      @apply font-[Doto] font-bold not-italic;
+    }
+
     strong {
       @apply rounded-xs bg-neutral-800 px-1 font-normal text-neutral-300 not-italic transition hover:bg-neutral-700 hover:text-neutral-50;
     }
@@ -21,6 +25,10 @@
 
     blockquote {
       @apply rounded-[0.25rem] border-l-2 border-neutral-500 pl-3;
+    }
+
+    hr {
+      @apply mx-auto my-8 max-w-1 border border-neutral-800;
     }
   }
 }

@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="flex items-center justify-between p-4">
       <Link
         href="/"
-        className={`${dotoMono.className} hover:drop-shadow-glow text-4xl font-bold text-neutral-50 transition`}
+        className={`${dotoMono.className} hover:drop-shadow-glow text-3xl font-bold text-neutral-50 transition`}
       >
         {frontmatter.logo}
       </Link>
@@ -20,7 +20,7 @@ export default function Navbar() {
           <li key={link.name}>
             <Link
               href={link.href}
-              className="hover hover:drop-shadow-glow transition hover:text-neutral-50"
+              className="hover:drop-shadow-glow transition hover:text-neutral-50"
             >
               {link.name}
             </Link>
