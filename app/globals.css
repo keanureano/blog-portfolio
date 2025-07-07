@@ -28,7 +28,7 @@
     }
 
     hr {
-      @apply mx-auto my-8 max-w-1 border border-neutral-800;
+      @apply mx-auto my-8 max-w-12 border border-neutral-800;
     }
   }
 }
