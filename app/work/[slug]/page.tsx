@@ -8,7 +8,7 @@ interface Params {
 }
 
 export default async function WorkPage({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug } = params;
   const { content } = await getMdx(`cms/work/${slug}.mdx`);
   return <MDXRemote source={content} />;
 }
