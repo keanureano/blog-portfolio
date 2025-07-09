@@ -34,6 +34,10 @@
     hr {
       @apply mx-auto my-8 max-w-12 border border-neutral-800;
     }
+
+    img {
+      @apply mb-6 rounded-xs;
+    }
   }
 }
 
