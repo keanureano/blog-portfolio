@@ -1,8 +1,8 @@
-import { mdx } from "@/lib/mdx";
+import { getMdx } from "@/lib/mdx";
 import { Doto } from "next/font/google";
 import Link from "next/link";
 
-const { frontmatter } = await mdx("cms/home.mdx");
+const { frontmatter } = await getMdx("cms/home.mdx");
 
 const dotoMono = Doto({ subsets: ["latin"] });
 

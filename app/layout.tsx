@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import Navbar from "@/components/Navbar";
-import { mdx } from "@/lib/mdx";
+import { getMdx } from "@/lib/mdx";
+import Background from "@/components/Background";
 
-const { frontmatter } = await mdx("cms/home.mdx");
+const { frontmatter } = await getMdx("cms/home.mdx");
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,11 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.className} bg-black text-neutral-400 antialiased selection:bg-neutral-900`}
+        className={`${geistMono.className} selection:bg-neutral-90 bg-black text-neutral-400 antialiased`}
       >
-        <BackgroundBeams />
+        <Background />
         <Navbar />
-        <main className="animate-fade-in mdx relative z-10 container mx-auto min-h-screen max-w-2xl px-4 py-12">
+        <main className="animate-fade-in mdx relative z-10 container mx-auto min-h-screen max-w-3xl px-4 py-12">
           {children}
         </main>
       </body>

@@ -1,7 +1,7 @@
-import { mdx } from "@/lib/mdx";
+import { getMdx } from "@/lib/mdx";
 import type { MetadataRoute } from "next";
 
-const { frontmatter } = await mdx("cms/home.mdx");
+const { frontmatter } = await getMdx("cms/home.mdx");
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
