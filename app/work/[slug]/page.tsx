@@ -3,12 +3,10 @@
 import { getMdx, getMdxFiles } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
-interface Params {
-  slug: string;
-}
+type Params = Promise<{ slug: string[] }>;
 
 export default async function WorkPage({ params }: { params: Params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const { content } = await getMdx(`cms/work/${slug}.mdx`);
   return <MDXRemote source={content} />;
 }
