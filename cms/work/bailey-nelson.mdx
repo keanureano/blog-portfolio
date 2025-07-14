@@ -2,7 +2,7 @@
 title: "Bailey Nelson - ERP with Netsuite & POS"
 ---
 
-# _How I Built a Lightweight ERP for Bailey Nelson Using Airtable and Make.com_
+## _How I Built a Lightweight ERP for Bailey Nelson Using Airtable and Make.com_
 
 ## _Intro_
 
@@ -14,5 +14,32 @@ Off-the-shelf ERP solutions were too rigid, too slow to implement, or simply ove
 So I built a custom, lightweight ERP - using **Airtable** as the central hub and **Make.com** to handle the integrations.
 It was fast to deploy, easy for teams to use, and flexible enough to grow with the business.
 
+## _The Data Schema_
+
 ![Bailey Nelson 1](/work/bailey-nelson-1.png)
+
+Creating a product used to involve checking **multiple spreadsheets** to find a barcode, making sure it wasn't already used, and manually linking the right colour, model, and supplier.
+
+Now, it's all handled in one place. The system generates a barcode automatically, checks for duplicates, and sets everything up with a **single click**.
+
+Comparing supplier prices was also a challenge. Quotes were scattered across emails or spreadsheets, and there was no clear history. With the new setup, every **price quote** is tracked in the system. The team can see current and past prices, compare across suppliers, and make faster, more informed decisions.
+
+Tracking orders and shipments is now much easier too. Before, the team had to email suppliers for updates, and things would often get lost.
+
+Now, suppliers can update their orders directly through the system, including delay requests, changes, and shipment status.
+
+Some suppliers can even update their **stock levels**, so the team knows exactly what's available before placing an order.
+
+## _System Workflow_
+
 ![Bailey Nelson 2](/work/bailey-nelson-2.png)
+
+To connect everything behind the scenes, I built a custom workflow using **Airtable**, **Make.com**, **NetSuite**, and the existing **POS system**.
+
+Airtable acts as the source of truth. When a product or order is created, it formats the data into a **NetSuite compatible payload**, using custom logic written in **JavaScript**. That payload is passed to **Make.com**, which handles the integration.
+
+Make.com makes an authenticated **REST API call** to NetSuite. If something goes wrong, like a validation error or failed request, the system feeds that back into Airtable so the team knows exactly what happened and can fix it quickly.
+
+The POS system works a bit differently. We export **CSV files** on a schedule through an **SFTP connection**. The POS then pulls in just the columns it needs to keep its own systems up to date.
+
+This setup gave Bailey Nelson a reliable way to sync all core systems without needing to rebuild anything, and kept the team fully in control of their data.

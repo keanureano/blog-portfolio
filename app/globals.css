@@ -36,7 +36,11 @@
     }
 
     img {
-      @apply mb-6 rounded-xs;
+      @apply my-6 rounded-xs;
+    }
+
+    li {
+      @apply mb-2 list-inside list-disc;
     }
   }
 }
