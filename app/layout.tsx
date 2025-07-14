@@ -29,7 +29,7 @@ export default function RootLayout({
       >
         <Background />
         <Navbar />
-        <main className="animate-fade-in mdx relative z-10 container mx-auto min-h-screen max-w-3xl px-4 py-12">
+        <main className="animate-fade-in mdx relative z-10 mx-auto min-h-screen max-w-4xl px-4 py-12">
           {children}
         </main>
       </body>
