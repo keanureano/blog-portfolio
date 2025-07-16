@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: frontmatter.name,
+  title: frontmatter.title,
   description: frontmatter.description,
 };
 

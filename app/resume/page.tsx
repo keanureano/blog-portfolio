@@ -1,7 +1,12 @@
 import { getMdx } from "@/lib/mdx";
+import { Metadata } from "next";
 import Link from "next/link";
 
-export default async function ResumePage() {
+export const metadata: Metadata = {
+  title: "Resume | KN",
+};
+
+export default async function Resume() {
   const { frontmatter } = await getMdx("cms/home.mdx");
   return (
     <>
